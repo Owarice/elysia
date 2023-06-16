@@ -50,7 +50,7 @@ pnpm-lock.yaml
 Thumbs.db
 desktop.ini
 *.log
-
+package-lock.json
 
 
 
