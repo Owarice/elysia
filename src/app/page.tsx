@@ -5,6 +5,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#E5B0CE] items-center justify-between p-24">
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></link>
       <h1 className="font-bebas-neue text-5xl">Welcome To Elysias Room</h1>
+      <p>text text text text</p>
       <iframe
         width="560"
         height="315"
