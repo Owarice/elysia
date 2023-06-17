@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Button from '@mui/material-next/Button';
 import axios from 'axios';
+import { API_KEY } from './config.js';
 
 export default function Home() {
   const [latestVideo, setLatestVideo] = useState('');
@@ -11,12 +12,12 @@ export default function Home() {
       try {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
           params: {
-            part: 'snippet',
+            part: 'id',
             channelId: 'UCko6H6LokKM__B03i5_vBQQ',
             maxResults: 1,
             order: 'date',
             type: 'video',
-            key: 'AIzaSyCT-N-jvsf4sHjKDjGBYQpoqBzkCruvfW4',
+            key: API_KEY,
           },
         });
 
