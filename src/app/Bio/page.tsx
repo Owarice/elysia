@@ -42,6 +42,7 @@ export default function Bio() {
               <ul className="list-disc pl-4">
                 <li>Status: deceased</li>
                 <li>Gender: female</li>
+                <li>Spiecies: Mantis <br />Herrscher</li>
                 <li>Height: 163cm</li>
                 <li>Weight: 55kg</li>
                 <li>Hair Color: Light Pink</li>
