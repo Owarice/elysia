@@ -40,15 +40,22 @@ export default function Gallery() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[#E5B0CE] items-center justify-center p-24">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
       <div className="container">
-        <h2 className="text-2xl font-bold mb-4">Photo Gallery</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <nav className="flex justify-center  py-4">
+          <a className="text-white hover:text-pink-200 text-2xl font-bold" href="/">Home</a>
+          <span className="px-2"></span>
+          <a className="text-white hover:text-pink-200 text-2xl font-bold" href="/Bio">Biography</a>
+        </nav>
+        <h2 className="flex justify-center font-bebas-neue text-2xl">"Did you want to see me? Your Elysia will always meet your expectations."</h2>
+        <h2 className="text-3xl font-bold  mb-4 text-white">Photo Gallery</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((imageUrl, index) => (
             <div key={index} className="rounded-lg overflow-hidden">
               <img
                 src={imageUrl}
                 alt={`Image ${index}`}
-                className="w-full rounded-lg scale-100 h-60 w-60 object-cover cursor-pointer"
+                className="w-full rounded-lg h-60 object-cover cursor-pointer"
                 onClick={() => openLightbox(imageUrl)}
               />
             </div>

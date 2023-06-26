@@ -1,4 +1,5 @@
 'use client'
+'use client';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_KEY } from './config.js';
@@ -34,11 +35,17 @@ export default function Home() {
 
   useEffect(() => {
     const audio = new Audio('/BgmM.mp3');
-    audio.loop = true;
-    audio.play();
+
+    const playAudio = () => {
+      audio.loop = true;
+      audio.play();
+      document.removeEventListener('click', playAudio);
+    };
+
+    document.addEventListener('click', playAudio);
 
     return () => {
-      audio.pause();
+      document.removeEventListener('click', playAudio);
     };
   }, []);
 
@@ -46,6 +53,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#E5B0CE] items-center justify-between p-24">
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
       <h1 className="font-bebas-neue text-5xl">Welcome To Elysias Room</h1>
+      <h2 className="font-bebas-neue text-4xl">"A new day should start with a lovely encounter"</h2>
       <div className="container mx-auto text-2xl px-4 font-bebas-neue">
         <nav className="flex justify-center py-4 space-x-8">
           <a href="/gallery">gallery</a>
@@ -79,3 +87,4 @@ export default function Home() {
     </main>
   );
 }
+
