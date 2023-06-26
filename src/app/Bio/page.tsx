@@ -20,9 +20,9 @@ export default function Bio() {
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></link>
       <div className="max-w-4xl w-full px-4">
         <nav className="flex justify-center py-4">
-          <a className="text-white hover:text-pink-600 font-bold" href="/">Home</a>
-          <span className="px-2"></span> {/* Add a gap between the links */}
-          <a className="text-white hover:text-pink-600 font-bold" href="/gallery">Gallery</a>
+          <a className="text-white hover:text-pink-200 font-bold" href="/">Home</a>
+          <span className="px-2"></span>
+          <a className="text-white hover:text-pink-200 font-bold" href="/gallery">Gallery</a>
         </nav>
         <div className="bg-[#E5B0CE] bg-opacity-90 rounded-lg shadow-lg p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
