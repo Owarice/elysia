@@ -33,7 +33,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const audio = new Audio('/bgm.mp3');
+    const audio = new Audio('/BgmM.mp3');
     audio.loop = true;
     audio.play();
 
