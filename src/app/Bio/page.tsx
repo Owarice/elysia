@@ -15,6 +15,16 @@ export default function Bio() {
       .catch((error) => console.log(error));
   }, []);
 
+  useEffect(() => {
+    const audio = new Audio('/BgmB.mp3');
+    audio.loop = true;
+    audio.play();
+
+    return () => {
+      audio.pause();
+    };
+  }, []);
+
   return (
     <div className="bg-[#E5B0CE] bg-cover min-h-screen flex flex-col items-center justify-center p-8 font-bebas-neue text-white">
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></link>
@@ -42,7 +52,7 @@ export default function Bio() {
               <ul className="list-disc pl-4">
                 <li>Status: deceased</li>
                 <li>Gender: female</li>
-                <li>Spiecies: Mantis <br />Herrscher</li>
+                <li>Species: Mantis <br />Herrscher</li>
                 <li>Height: 163cm</li>
                 <li>Weight: 55kg</li>
                 <li>Hair Color: Light Pink</li>

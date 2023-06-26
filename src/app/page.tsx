@@ -53,15 +53,6 @@ export default function Home() {
         </nav>
       </div>
       <p>Go download Honkai Impact 3rd Today!</p>
-      <a
-        href="https://honkaiimpact3.hoyoverse.com/global/en-us/fab"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Download
-        </button>
-      </a>
       {latestVideo && (
         <iframe
           width="560"
@@ -71,9 +62,20 @@ export default function Home() {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          className="mt-8"
         ></iframe>
       )}
+
+      <a
+        href="https://honkaiimpact3.hoyoverse.com/global/en-us/download?utm_source=fab"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4"
+      >
+        <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
+          Download
+        </button>
+      </a>
     </main>
   );
 }
-

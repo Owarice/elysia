@@ -13,6 +13,17 @@ export default function Gallery() {
       .catch((error) => console.log(error));
   }, []);
 
+  useEffect(() => {
+    const audio = new Audio(`/BgmG.mp3`);
+    audio.loop = true;
+    audio.play();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
+
   const openLightbox = (imageUrl) => {
     setSelectedImage(imageUrl);
   };
